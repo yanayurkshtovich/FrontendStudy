@@ -1,0 +1,117 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Doto", sans-serif;
+    font-size: 12vw;
+    text-shadow: 5px 5px 2px #bcbdbe;
+    color: #000000;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.buttons-layout,
+.gallery {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-gap: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover;
+    box-shadow: 2px 2px 8px 3px  rgb(167, 167, 167);
+    cursor: crosshair;
+    margin-top: 30%;
+}
+
+.gallery img:hover {
+    transform: scale(1.3);
+}
+
+.img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .buttons-layout {
+        grid-template-columns: repeat(3, minmax(1px, 100%));
+        margin-bottom: 2%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, minmax(1px, 100%));
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .buttons-layout,
+    .gallery {
+        grid-template-columns: repeat(3, minmax(1px, 100%));
+    }
+}
+
+@media screen and (max-width: 300px) and (min-width: 220) {
+    .buttons-layout {
+        grid-template-rows: repeat(1, minmax(1px, 100%));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(1px, 100%));
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .buttons-layout {
+        grid-template-rows: repeat(1, minmax(1px, 100%));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, minmax(1px, 100%));
+    }
+}
+
+.buttons-layout .activeBtn {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3.9vw;
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+    background: #4F95DA;
+    border: 3px solid #4F95DA;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.buttons-layout .inactiveBtn {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3.9vw;
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    border: 3px solid #4F95DA;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.buttons-layout .inactiveBtn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+}
+
+h1:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
